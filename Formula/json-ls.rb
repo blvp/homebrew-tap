@@ -4,6 +4,12 @@ class JsonLs < Formula
   version "0.1.1"
   license "MIT"
 
+  # Superseded by vscode-json-language-server from the vscode-langservers-extracted
+  # npm package (upstream: microsoft/vscode-json-languageservice). The upstream
+  # json-ls repository is archived; v0.1.1 is its final release.
+  deprecate! date:    "2026-09-02",
+             because: "is superseded by vscode-json-language-server (vscode-langservers-extracted)"
+
   on_macos do
     on_arm do
       url "https://github.com/blvp/json-ls/releases/download/v0.1.1/json-ls-0.1.1-aarch64-macos.tar.gz"
